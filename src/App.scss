@@ -10,7 +10,7 @@
     flex-direction: column;
     overflow: hidden;
     flex: 1;
-    img {
+    & .logo {
         object-fit: contain;
         width: 100%;
     }

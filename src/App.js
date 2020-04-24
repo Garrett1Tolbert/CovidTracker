@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import Bubble from './components/Bubble';
+import Bubble from './components/DataChart';
 import BottomSheet from './components/BottomSheet';
 import logo from './res/logo.png';
 
@@ -39,7 +39,7 @@ function App() {
             <div className='bs-icon' onClick={() => setShowBS(true)}>
                 <i className='material-icons'>filter_list</i>
             </div>
-            <img alt='logo' src={logo} />
+            <img className='logo' alt='logo' src={logo} />
             <Bubble
                 color='#F57C00'
                 bg='#FFCC80'

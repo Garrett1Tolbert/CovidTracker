@@ -1,60 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import './styles/Bubble.css';
+import './styles/DataChart.css';
 import { useCountUp } from 'react-countup';
 import { AreaChart, Area, Tooltip } from 'recharts';
 
-const thisData = [
-    {
-        name: 'Page A',
-        uv: 4000,
-        pv: 2400,
-        recovered: 22,
-        amt: 2400,
-    },
-    {
-        name: 'Page B',
-        uv: 3000,
-        pv: 1398,
-        recovered: 10,
-        amt: 2210,
-    },
-    {
-        name: 'Page C',
-        uv: 2000,
-        pv: 9800,
-        recovered: 62,
-        amt: 2290,
-    },
-    {
-        name: 'Page D',
-        uv: 2780,
-        pv: 3908,
-        recovered: 12,
-        amt: 2000,
-    },
-    {
-        name: 'Page E',
-        uv: 1890,
-        pv: 4800,
-        recovered: 21,
-        amt: 2181,
-    },
-    {
-        name: 'Page F',
-        uv: 2390,
-        pv: 3800,
-        recovered: 45,
-        amt: 2500,
-    },
-    {
-        name: 'Page G',
-        uv: 3490,
-        pv: 4300,
-        recovered: 12,
-        amt: 2100,
-    },
-];
-const Bubble = ({ color, bg, accent, label, type, data }) => {
+const DataChart = ({ color, bg, accent, label, type, data }) => {
     const { countUp, update } = useCountUp({
         start: 0,
         end: data,
@@ -75,28 +24,21 @@ const Bubble = ({ color, bg, accent, label, type, data }) => {
                         countryRegion: item.countryRegion,
                         confirmed: item.confirmed,
                     }));
-                    // console.log(
-                    //     newData.map((item, idx) => (idx > 30 ? null : item))
-                    // );
-                    console.log(newData.slice(0, 35));
-
-                    setFetchedData(newData.slice(0, 10));
+                    setFetchedData(newData.slice(0, 15));
                     break;
                 case 'recovered':
                     newData = data.map((item) => ({
                         countryRegion: item.countryRegion,
                         recovered: item.recovered,
                     }));
-                    console.log(newData);
-                    setFetchedData(newData.slice(0, 10));
+                    setFetchedData(newData.slice(0, 15));
                     break;
                 default:
                     newData = data.map((item) => ({
                         countryRegion: item.countryRegion,
                         deaths: item.deaths,
                     }));
-                    console.log(newData);
-                    setFetchedData(newData.slice(0, 10));
+                    setFetchedData(newData.slice(0, 15));
                     break;
             }
         };
@@ -111,8 +53,8 @@ const Bubble = ({ color, bg, accent, label, type, data }) => {
                 <h1>{countUp}</h1>
             </div>
             <div className='details' style={{ color, backgroundColor: accent }}>
-                    <p>DETAILS</p>
-                </div>
+                <p>DETAILS</p>
+            </div>
             <div className='tag' style={{ color, backgroundColor: accent }}>
                 <p>{label}</p>
             </div>
@@ -133,4 +75,4 @@ const Bubble = ({ color, bg, accent, label, type, data }) => {
         </div>
     );
 };
-export default Bubble;
+export default DataChart;
