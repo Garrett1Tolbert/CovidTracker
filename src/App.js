@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import Bubble from './components/Bubble';
 import BottomSheet from './components/BottomSheet';
+import logo from './res/logo.png';
 
 function App() {
     const [selectedCountry, setSelectedCountry] = useState('');
@@ -25,22 +26,44 @@ function App() {
                 deaths,
                 countries,
             } = await response.json();
-            setConfirmed(confirmed.value);
-            setRecovered(recovered.value);
-            setDeaths(deaths.value);
+            setConfirmed(confirmed);
+            setRecovered(recovered);
+            setDeaths(deaths);
             fetchCountries(countries);
         };
         fetchData();
     }, []);
+
     return (
         <div className='App'>
             <div className='bs-icon' onClick={() => setShowBS(true)}>
                 <i className='material-icons'>filter_list</i>
             </div>
-            <div className='title'>Covid Around the World</div>
-            <Bubble color='#F57C00' label='CONFIRMED' data={confirmed} />
-            <Bubble color='#66BB6A' label='RECOVERED' data={recovered} />
-            <Bubble color='#E53935' label='DEATHS' data={deaths} />
+            <img alt='logo' src={logo} />
+            <Bubble
+                color='#F57C00'
+                bg='#FFCC80'
+                label='CONFIRMED'
+                data={confirmed}
+                type='confirmed'
+                accent='#fff3e0'
+            />
+            <Bubble
+                color='#66BB6A'
+                bg='#A5D6A7'
+                label='RECOVERED'
+                data={recovered}
+                type='recovered'
+                accent='#E8F5E9'
+            />
+            <Bubble
+                color='#E53935'
+                bg='#EF9A9A'
+                label='DEATHS'
+                data={deaths}
+                type='deaths'
+                accent='#FFEBEE'
+            />
             <BottomSheet
                 countries={countries}
                 show={showBS}

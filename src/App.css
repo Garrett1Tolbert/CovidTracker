@@ -22,21 +22,17 @@
           flex: 1;
 }
 
-.App .title {
-  background-image: -webkit-gradient(linear, left top, right top, from(#0f2027), color-stop(#203a43), to(#2c5364));
-  background-image: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  text-align: center;
-  padding: 16px;
-  font-size: 32px;
-  font-weight: 800;
-  color: #fff;
-  margin: 0;
+.App img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
 }
 
 .App .bs-icon {
   cursor: pointer;
+  z-index: 10;
   position: absolute;
-  bottom: 48px;
+  bottom: 32px;
   right: 16px;
   padding: 24px;
   border-radius: 50%;
