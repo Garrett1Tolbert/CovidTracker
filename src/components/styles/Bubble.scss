@@ -1,0 +1,42 @@
+.bw {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // border: 1px solid;
+    & .bw-bo {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        box-shadow: 0 0 10px #203a43;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        cursor: pointer;
+        & .bw-bi {
+            height: 170px;
+            width: 170px;
+            border: none;
+            box-shadow: 0 0 10px #525456;
+            background: #fff;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            h1 {
+                margin: 0;
+                font-size: 32px;
+                font-weight: 800;
+                color: #525456;
+            }
+            p {
+                margin: 0;
+                font-size: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+}

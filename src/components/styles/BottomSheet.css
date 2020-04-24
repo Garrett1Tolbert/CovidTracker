@@ -1,0 +1,163 @@
+.bs-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+}
+
+.bs-wrapper.show {
+  z-index: 10;
+}
+
+.bs-wrapper.show .overlay {
+  opacity: 1;
+}
+
+.bs-wrapper.show .bs-container {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.bs-wrapper .overlay {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.bs-wrapper .bs-container {
+  position: absolute;
+  padding-top: 16px;
+  bottom: 0;
+  height: 75vh;
+  -webkit-transform: translateY(75vh);
+          transform: translateY(75vh);
+  background-color: #fff;
+  -webkit-box-shadow: 0 -4px 8px #525456;
+          box-shadow: 0 -4px 8px #525456;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bs-wrapper .bs-container .country-li {
+  padding: 0 24px;
+  background-color: #fff;
+}
+
+.bs-wrapper .bs-container .country-li:hover {
+  background-color: #e0e0e0;
+}
+
+.bs-wrapper .bs-container .country-li.gray {
+  background-color: #f5f5f5;
+}
+
+.bs-wrapper .bs-container .country-li.gray:hover {
+  background-color: #e0e0e0;
+}
+
+.bs-wrapper .bs-container .country-li p {
+  margin: 0;
+  padding: 12px 0;
+  font-size: 20px;
+  font-weight: 400;
+  color: #777;
+}
+
+.bs-wrapper .bs-container .module {
+  width: 100vw !important;
+  height: 100%;
+}
+
+.bs-wrapper .bs-container .module:nth-child(2) {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.bs-wrapper .bs-container .module.data {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+.bs-wrapper .bs-container .data-sec .countryID {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 25px 0;
+}
+
+.bs-wrapper .bs-container .data-sec .countryID h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #777;
+  font-weight: 700;
+}
+
+.bs-wrapper .bs-container .data-sec .countryID img {
+  margin-left: 12px;
+}
+
+.bs-wrapper .bs-container .data-sec .back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin-left: 12px;
+  width: 100px;
+}
+
+.bs-wrapper .bs-container .data-sec .back i {
+  font-size: 24px;
+  color: #203a43;
+}
+
+.bs-wrapper .bs-container .data-sec .back p {
+  margin: 0;
+  font-size: 24px;
+  color: #203a43;
+}
+
+.bs-wrapper .bs-container .data-sec .chart {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.bs-wrapper .bs-container .data-sec .chart .lu {
+  margin: 20px 0;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  color: #777;
+  font-style: italic;
+}
+/*# sourceMappingURL=BottomSheet.css.map */
